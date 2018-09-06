@@ -7,7 +7,7 @@ delete:
 	@docker rm ${NAME}
 	@docker rmi localhost:5000/${NAME}
 
-compile: delete
+compile: 
 	@docker build -t localhost:5000/${NAME}:latest .
 
 run: compile
